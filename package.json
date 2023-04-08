@@ -1,0 +1,40 @@
+{
+  "name": "fe-react-template",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github.com:veeso/fe-react-template.git",
+  "author": "Christian Visintin <christian.visintin@veeso.dev>",
+  "license": "MIT",
+  "scripts": {
+    "build-prod": "yarn clean && parcel build src/index.html",
+    "clean": "rm dist/*",
+    "start": "parcel src/index.html"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "flat": "^5.0.2",
+    "js-cookie": "^3.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-intl": "^6.3.2",
+    "react-router-dom": "^6.10.0",
+    "styled-components": "^5.3.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-react": "^7.18.6",
+    "@types/flat": "^5.0.2",
+    "@types/gtag.js": "^0.0.12",
+    "@types/js-cookie": "^3.0.3",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "@types/react-helmet": "^6.1.6",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.26",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.61.0",
+    "typescript": "^5.0.4"
+  }
+}

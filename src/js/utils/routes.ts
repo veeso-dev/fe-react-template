@@ -1,0 +1,50 @@
+import { getNavigatorLanguage } from "./translations";
+
+export enum Route {
+  CONTACTS = "contacts",
+  COOKIE_POLICY = "cookie-policy",
+  HOME = "home",
+  PRIVACY = "privacy",
+}
+
+export namespace Route {
+  export function url(route: Route): string {
+    const lang = getNavigatorLanguage();
+
+    if (route === Route.HOME) {
+      return `/${lang}`;
+    }
+
+    return `/${lang}/${route}`;
+  }
+}
+
+export interface MenuEntries {
+  [key: string]: MenuEntry;
+}
+
+interface MenuEntry {
+  label: string;
+  link?: Route;
+  section?: string;
+}
+
+const DEFAULT_ROUTES: MenuEntries = {
+  home: {
+    label: "topbar.home",
+    link: Route.HOME,
+  },
+};
+
+export const routesForPath = (path: string): MenuEntries => DEFAULT_ROUTES;
+
+export const getIdFromHash = (): string | undefined => {
+  let hash = window.location.hash;
+  let lastIndex = hash.lastIndexOf("#");
+
+  if (lastIndex <= 0) {
+    return undefined;
+  }
+
+  return hash.slice(lastIndex + 1);
+};

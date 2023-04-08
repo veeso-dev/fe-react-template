@@ -1,10 +1,10 @@
 {
   "name": "fe-react-template",
   "version": "0.1.0",
-  "main": "index.js",
   "repository": "git@github.com:veeso/fe-react-template.git",
   "author": "Christian Visintin <christian.visintin@veeso.dev>",
   "license": "MIT",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "build-prod": "yarn clean && parcel build src/index.html",
     "clean": "rm dist/*",
@@ -23,9 +23,7 @@
     "styled-components": "^5.3.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.4",
-    "@babel/preset-env": "^7.21.4",
-    "@babel/preset-react": "^7.18.6",
+    "@parcel/transformer-sass": "2.8.3",
     "@types/flat": "^5.0.2",
     "@types/gtag.js": "^0.0.12",
     "@types/js-cookie": "^3.0.3",
@@ -35,7 +33,8 @@
     "@types/react-lazyload": "^3.2.0",
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.26",
-    "parcel-bundler": "^1.12.5",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10",
     "sass": "^1.61.0",
     "typescript": "^5.0.4"
   }

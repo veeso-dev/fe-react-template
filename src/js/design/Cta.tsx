@@ -1,5 +1,5 @@
-import * as React from "react";
-import styled from "styled-components";
+import * as React from 'react';
+import styled from 'styled-components';
 
 const Button = styled.button`
   border: 1px solid #ccc;
@@ -36,7 +36,7 @@ const Cta = (props: Props) => {
   const style = props.disabled
     ? {}
     : {
-        backgroundColor: props.transparent ? "rgba(0,0,0,0)" : "#1e2331",
+        backgroundColor: props.transparent ? 'rgba(0,0,0,0)' : '#1e2331',
       };
 
   return (

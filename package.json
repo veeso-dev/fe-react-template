@@ -8,7 +8,10 @@
   "scripts": {
     "build-prod": "yarn clean && parcel build src/index.html",
     "clean": "rm dist/*",
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html",
+    "lint": "eslint . --ext .ts --ext .tsx --max-warnings=0",
+    "prettier": "prettier --config .prettierrc --write src/",
+    "prettier:check": "prettier --config .prettierrc --check src/"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
@@ -33,7 +36,12 @@
     "@types/react-lazyload": "^3.2.0",
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "eslint": "~8.28",
+    "eslint-config-prettier": "~8.5",
     "parcel": "^2.8.3",
+    "prettier": "~2.8",
     "process": "^0.11.10",
     "sass": "^1.61.0",
     "typescript": "^5.0.4"

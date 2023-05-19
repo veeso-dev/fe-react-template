@@ -3,7 +3,7 @@ interface Contacts {
 }
 
 const CONTACTS: Contacts = {
-  authorVat: "IT03104140300",
+  authorVat: 'IT03104140300',
 };
 
 export default CONTACTS;

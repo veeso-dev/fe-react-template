@@ -1,22 +1,20 @@
-import { getNavigatorLanguage } from "./translations";
+import { getNavigatorLanguage } from './translations';
 
 export enum Route {
-  CONTACTS = "contacts",
-  COOKIE_POLICY = "cookie-policy",
-  HOME = "home",
-  PRIVACY = "privacy",
+  CONTACTS = 'contacts',
+  COOKIE_POLICY = 'cookie-policy',
+  HOME = 'home',
+  PRIVACY = 'privacy',
 }
 
-export namespace Route {
-  export function url(route: Route): string {
-    const lang = getNavigatorLanguage();
+export function url(route: Route): string {
+  const lang = getNavigatorLanguage();
 
-    if (route === Route.HOME) {
-      return `/${lang}`;
-    }
-
-    return `/${lang}/${route}`;
+  if (route === Route.HOME) {
+    return `/${lang}`;
   }
+
+  return `/${lang}/${route}`;
 }
 
 export interface MenuEntries {
@@ -31,7 +29,7 @@ interface MenuEntry {
 
 const DEFAULT_ROUTES: MenuEntries = {
   home: {
-    label: "topbar.home",
+    label: 'topbar.home',
     link: Route.HOME,
   },
 };
@@ -39,8 +37,8 @@ const DEFAULT_ROUTES: MenuEntries = {
 export const routesForPath = (path: string): MenuEntries => DEFAULT_ROUTES;
 
 export const getIdFromHash = (): string | undefined => {
-  let hash = window.location.hash;
-  let lastIndex = hash.lastIndexOf("#");
+  const hash = window.location.hash;
+  const lastIndex = hash.lastIndexOf('#');
 
   if (lastIndex <= 0) {
     return undefined;

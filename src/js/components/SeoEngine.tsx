@@ -1,16 +1,16 @@
-import * as React from "react";
-import { useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import * as React from 'react';
+import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
-import { pageDescription, pageTitle } from "../utils/seo";
-import { getNavigatorLanguage } from "../utils/translations";
+import { pageDescription, pageTitle } from '../utils/seo';
+import { getNavigatorLanguage } from '../utils/translations';
 
 const SeoEngine = () => {
   const { pathname } = useLocation();
   // states
   const [title, setTitle] = React.useState(pageTitle(pathname));
   const [description, setDescription] = React.useState(
-    pageDescription(pathname)
+    pageDescription(pathname),
   );
 
   React.useEffect(() => {

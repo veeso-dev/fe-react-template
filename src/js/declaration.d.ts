@@ -1,14 +1,14 @@
-declare module "*.webp" {
+declare module '*.webp' {
   const value: any;
   export = value;
 }
 
-declare module "*.svg" {
+declare module '*.svg' {
   const value: any;
   export = value;
 }
 
-declare module "*.gif" {
+declare module '*.gif' {
   const value: any;
   export = value;
 }

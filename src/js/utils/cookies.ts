@@ -1,6 +1,6 @@
-import Cookie from "js-cookie";
+import Cookie from 'js-cookie';
 
-const COOKIE_POLICY = "cookie-preferences";
+const COOKIE_POLICY = 'cookie-preferences';
 
 interface CookiePreferences {
   technical: boolean;
@@ -24,7 +24,7 @@ const setCookiePreferences = (prefs: CookiePreferences) => {
   expiringDate.setFullYear(expiringDate.getFullYear() + 5);
   Cookie.set(COOKIE_POLICY, JSON.stringify(prefs), {
     expires: expiringDate,
-    path: "/",
+    path: '/',
   });
 };
 

@@ -1,10 +1,10 @@
-import { flatten } from "flat";
+import { flatten } from 'flat';
 
-import EnTranslations from "../../lang/en.json";
-import ItTranslations from "../../lang/it.json";
+import EnTranslations from '../../lang/en.json';
+import ItTranslations from '../../lang/it.json';
 
-const LANG_ITALIAN = "it";
-const LANG_ENGLISH = "en";
+const LANG_ITALIAN = 'it';
+const LANG_ENGLISH = 'en';
 
 export type Language = typeof LANG_ITALIAN | typeof LANG_ENGLISH;
 
@@ -26,9 +26,9 @@ const getPureNavigatorLanguage = (): Language => {
     return lang as Language;
   }
   // Reduced lang
-  lang = lang.split(/[-_]/)[0] || "en";
+  lang = lang.split(/[-_]/)[0] || 'en';
   if (!languageSupported(lang)) {
-    return "en";
+    return 'en';
   }
   return lang as Language;
 };

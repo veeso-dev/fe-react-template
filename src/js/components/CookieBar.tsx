@@ -1,13 +1,13 @@
-import * as React from "react";
-import { FormattedMessage } from "react-intl";
-import styled from "styled-components";
-import { useNavigate, Link } from "react-router-dom";
+import * as React from 'react';
+import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
+import { useNavigate, Link } from 'react-router-dom';
 
-import { acceptAllCookies } from "../utils/cookies";
-import { setGaConsent } from "../utils/ga";
-import { Route } from "../utils/routes";
-import Cta from "../design/Cta";
-import Title from "../design/Title";
+import { acceptAllCookies } from '../utils/cookies';
+import { setGaConsent } from '../utils/ga';
+import { Route } from '../utils/routes';
+import Cta from '../design/Cta';
+import Title from '../design/Title';
 
 const Container = styled.div`
   background-color: white;
@@ -77,7 +77,7 @@ const CookieBar = (props: Props) => {
             <FormattedMessage id="cookies.bar.title" />
           </Title>
           <Description>
-            <FormattedMessage id="cookies.bar.body" />{" "}
+            <FormattedMessage id="cookies.bar.body" />{' '}
             <Link to={Route.url(Route.COOKIE_POLICY)}>Cookie Policy</Link>
           </Description>
         </TextArea>

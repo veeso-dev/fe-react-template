@@ -8,9 +8,9 @@ interface SeoData {
 }
 
 const PAGE_TITLES: SeoPages = {
-  "/": {
-    title: "",
-    description: "",
+  '/': {
+    title: '',
+    description: '',
   },
 };
 
@@ -24,10 +24,10 @@ const seoData = (pathname: string): SeoData | undefined => {
 
 export const pageTitle = (pathname: string): string => {
   const data = seoData(pathname);
-  return data ? data.title : "404 Not found";
+  return data ? data.title : '404 Not found';
 };
 
 export const pageDescription = (pathname: string): string => {
   const data = seoData(pathname);
-  return data ? data.description : "Page could not be found on the website";
+  return data ? data.description : 'Page could not be found on the website';
 };

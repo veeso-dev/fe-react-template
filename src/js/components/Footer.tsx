@@ -1,6 +1,6 @@
-import * as React from "react";
-import styled from "styled-components";
-import CONTACTS from "../data/contacts";
+import * as React from 'react';
+import styled from 'styled-components';
+import CONTACTS from '../data/contacts';
 
 const Container = styled.div`
   background: #1e2331;
@@ -19,7 +19,7 @@ const Container = styled.div`
 
 const Border = styled.div`
   background-color: #aaa;
-  content: "";
+  content: '';
   height: 2px;
   margin-left: 10%;
   width: 80%;
@@ -48,7 +48,7 @@ const Footer = () => {
       <Container>
         <Border />
         <Copyright>
-          Copyright © Christian Visintin {year} | P.IVA {CONTACTS.authorVat} |{" "}
+          Copyright © Christian Visintin {year} | P.IVA {CONTACTS.authorVat} |{' '}
           <VeesoDev href="https://veeso.dev" target="_blank">
             www.veeso.dev
           </VeesoDev>

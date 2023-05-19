@@ -6,6 +6,8 @@ import { useNavigate, Link } from "react-router-dom";
 import { acceptAllCookies } from "../utils/cookies";
 import { setGaConsent } from "../utils/ga";
 import { Route } from "../utils/routes";
+import Cta from "../design/Cta";
+import Title from "../design/Title";
 
 const Container = styled.div`
   background-color: white;
@@ -28,11 +30,6 @@ const Form = styled.div`
   }
 `;
 
-const Title = styled.h2`
-  color: #444;
-  font-weight: 700;
-`;
-
 const Description = styled.p`
   color: #888;
   padding: 8px;
@@ -52,21 +49,6 @@ const ButtonArea = styled.div`
   flex-direction: column;
   gap: 16px;
   justify-content: space-around;
-`;
-
-const Button = styled.button`
-  background: #333;
-  border: 1px solid #ccc;
-  border-radius: 1em;
-  color: white;
-  display: block;
-  font-size: 1.1em;
-  font-weight: 700;
-  padding: 12px 16px;
-
-  :hover {
-    background: #222;
-  }
 `;
 
 interface Props {
@@ -100,12 +82,12 @@ const CookieBar = (props: Props) => {
           </Description>
         </TextArea>
         <ButtonArea>
-          <Button onClick={onAcceptAll}>
+          <Cta onClick={onAcceptAll}>
             <FormattedMessage id="cookies.bar.acceptAll" />
-          </Button>
-          <Button onClick={onGoToPolicy}>
+          </Cta>
+          <Cta onClick={onGoToPolicy}>
             <FormattedMessage id="cookies.bar.customise" />
-          </Button>
+          </Cta>
         </ButtonArea>
       </Form>
     </Container>

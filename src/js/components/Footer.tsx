@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import CONTACTS from "../data/contacts";
 
 const Container = styled.div`
   background: #1e2331;
@@ -31,8 +32,13 @@ const Border = styled.div`
 
 const Copyright = styled.h5`
   color: white;
-  font-size: 0.7em;
+  font-size: 0.8em;
+  line-height: 2em;
   text-align: center;
+`;
+
+const VeesoDev = styled.a`
+  text-decoration: none;
 `;
 
 const Footer = () => {
@@ -41,7 +47,12 @@ const Footer = () => {
     <footer>
       <Container>
         <Border />
-        <Copyright>Copyright © Christian Visintin {year}</Copyright>
+        <Copyright>
+          Copyright © Christian Visintin {year} | P.IVA {CONTACTS.authorVat} |{" "}
+          <VeesoDev href="https://veeso.dev" target="_blank">
+            www.veeso.dev
+          </VeesoDev>
+        </Copyright>
       </Container>
     </footer>
   );

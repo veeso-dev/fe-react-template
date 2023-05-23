@@ -7,14 +7,17 @@ export enum Route {
   PRIVACY = 'privacy',
 }
 
-export function url(route: Route): string {
-  const lang = getNavigatorLanguage();
+// eslint-disable-next-line @typescript-eslint/no-namespace
+export namespace Route {
+  export function url(route: Route): string {
+    const lang = getNavigatorLanguage();
 
-  if (route === Route.HOME) {
-    return `/${lang}`;
+    if (route === Route.HOME) {
+      return `/${lang}`;
+    }
+
+    return `/${lang}/${route}`;
   }
-
-  return `/${lang}/${route}`;
 }
 
 export interface MenuEntries {

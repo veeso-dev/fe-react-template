@@ -27,3 +27,7 @@ jobs:
         uses: Borales/actions-yarn@v4.2.0
         with:
           cmd: lint
+      - name: Build
+        uses: Borales/actions-yarn@v4.2.0
+        with:
+          cmd: build:release

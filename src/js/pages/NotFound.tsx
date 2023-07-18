@@ -1,8 +1,7 @@
 import * as React from 'react';
-import styled from 'styled-components';
 
-const Container = styled.div``;
+import Page from '../components/shared/Page';
 
-const NotFound = () => <Container></Container>;
+const NotFound = () => <Page.Base></Page.Base>;
 
 export default NotFound;

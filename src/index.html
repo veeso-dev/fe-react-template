@@ -31,7 +31,22 @@
       sizes="16x16"
       href="./assets/images/favicon-16x16.png"
     />
+    <link href="./styles.css" rel="stylesheet" />
     <title>TODO:</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXX');
+    </script>
   </head>
   <body>
     <div id="app"></div>

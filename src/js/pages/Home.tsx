@@ -1,8 +1,8 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import Page from '../components/shared/Page';
 
 const Home = () => {
-  return <div className="home"></div>;
+  return <Page.Base></Page.Base>;
 };
 
 export default Home;

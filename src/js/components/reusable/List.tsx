@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as Icon from 'react-feather';
 
 import Container from './Container';
 import Paragraph from './Paragraph';

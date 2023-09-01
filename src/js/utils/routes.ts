@@ -30,20 +30,11 @@ interface MenuEntry {
   section?: string;
 }
 
-const DEFAULT_ROUTES: MenuEntries = {
-  home: {
-    label: 'topbar.home',
-    link: Route.HOME,
-  },
-};
-
-export const routesForPath = (path: string): MenuEntries => DEFAULT_ROUTES;
-
 export const getIdFromHash = (): string | undefined => {
   const hash = window.location.hash;
   const lastIndex = hash.lastIndexOf('#');
 
-  if (lastIndex <= 0) {
+  if (lastIndex < 0) {
     return undefined;
   }
 

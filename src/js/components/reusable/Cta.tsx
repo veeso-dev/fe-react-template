@@ -25,4 +25,16 @@ const Cta = (props: Props) => {
   );
 };
 
+export const Alternative = (props: Props) => {
+  return (
+    <Button.Alternative
+      className="text-lg h-fit px-24 py-4 w-full"
+      disabled={props.disabled}
+      onClick={props.onClick}
+    >
+      {props.children}
+    </Button.Alternative>
+  );
+};
+
 export default Cta;

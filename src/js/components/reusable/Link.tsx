@@ -13,7 +13,7 @@ const Default = (props: React.HTMLProps<HTMLAnchorElement>) => (
 const Button = (props: React.HTMLProps<HTMLAnchorElement>) => (
   <a
     href={props.href}
-    className="font-medium bg-brand text-white   hover:underline focus:ring-4 focus:ring-brand rounded-full"
+    className="font-medium bg-brand text-white hover:underline focus:ring-4 focus:ring-brand rounded-full"
     {...props}
   >
     {props.children}
@@ -23,7 +23,7 @@ const Button = (props: React.HTMLProps<HTMLAnchorElement>) => (
 const Paragraph = (props: React.HTMLProps<HTMLAnchorElement>) => (
   <a
     href={props.href}
-    className="font-medium text-brand 200 underline hover:no-underline"
+    className="font-medium text-brand cursor-pointer underline hover:no-underline"
     {...props}
   >
     {props.children}

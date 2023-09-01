@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Page from '../components/shared/Page';
+import Page from '../components/reusable/Page';
 
 const Home = () => {
-  return <Page.Base></Page.Base>;
+  return <Page.BlankPage></Page.BlankPage>;
 };
 
 export default Home;

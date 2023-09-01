@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 import CONTACTS from '../data/contacts';
-import Container from './shared/Container';
-import Heading from './shared/Heading';
+import Container from './reusable/Container';
+import Heading from './reusable/Heading';
 
 const Footer = () => {
   const year = new Date().getFullYear();

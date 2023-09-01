@@ -5,10 +5,10 @@ import { useNavigate, Link } from 'react-router-dom';
 import { acceptAllCookies } from '../utils/cookies';
 import { setGaConsent } from '../utils/ga';
 import { Route } from '../utils/routes';
-import Container from './shared/Container';
-import Heading from './shared/Heading';
-import Paragraph from './shared/Paragraph';
-import Cta from './shared/Cta';
+import Container from './reusable/Container';
+import Heading from './reusable/Heading';
+import Paragraph from './reusable/Paragraph';
+import Cta from './reusable/Cta';
 
 interface Props {
   onClose: () => void;

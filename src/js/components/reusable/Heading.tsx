@@ -32,9 +32,16 @@ const H4 = (props: React.HTMLProps<HTMLHeadingElement>) => (
   </h4>
 );
 
+const Jumbo = (props: React.HTMLProps<HTMLHeadingElement>) => (
+  <h1 className={`${props.className} text-3xl text-left font-normal`}>
+    {props.children}
+  </h1>
+);
+
 export default {
   H1,
   H2,
   H3,
   H4,
+  Jumbo,
 };

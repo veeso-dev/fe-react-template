@@ -2,7 +2,7 @@ import * as React from 'react';
 
 const Container = (props: React.HTMLProps<HTMLDivElement>) => {
   return (
-    <div id={props.id} className={`${props.className}`}>
+    <div id={props.id} {...props}>
       {props.children}
     </div>
   );

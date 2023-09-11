@@ -10,7 +10,13 @@ const Container = (props: React.HTMLProps<HTMLDivElement>) => {
 
 const PageContent = (props: React.HTMLProps<HTMLDivElement>) => {
   return (
-    <div id={props.id} className={`${props.className} w-9/12 sm:11/12 mx-auto`}>
+    <div
+      id={props.id}
+      itemProp={props.itemProp}
+      itemScope={props.itemScope}
+      itemType={props.itemType}
+      className={`${props.className} w-9/12 sm:11/12 mx-auto`}
+    >
       {props.children}
     </div>
   );
@@ -18,7 +24,13 @@ const PageContent = (props: React.HTMLProps<HTMLDivElement>) => {
 
 const Flex = (props: React.HTMLProps<HTMLDivElement>) => {
   return (
-    <div id={props.id} className={`${props.className} flex`}>
+    <div
+      id={props.id}
+      itemProp={props.itemProp}
+      itemScope={props.itemScope}
+      itemType={props.itemType}
+      className={`${props.className} flex`}
+    >
       {props.children}
     </div>
   );
@@ -26,7 +38,13 @@ const Flex = (props: React.HTMLProps<HTMLDivElement>) => {
 
 const FlexCols = (props: React.HTMLProps<HTMLDivElement>) => {
   return (
-    <div id={props.id} className={`${props.className} flex flex-col`}>
+    <div
+      id={props.id}
+      itemProp={props.itemProp}
+      itemScope={props.itemScope}
+      itemType={props.itemType}
+      className={`${props.className} flex flex-col`}
+    >
       {props.children}
     </div>
   );
@@ -34,7 +52,13 @@ const FlexCols = (props: React.HTMLProps<HTMLDivElement>) => {
 
 const FlexRow = (props: React.HTMLProps<HTMLDivElement>) => {
   return (
-    <div id={props.id} className={`${props.className} flex flex-row`}>
+    <div
+      id={props.id}
+      itemProp={props.itemProp}
+      itemScope={props.itemScope}
+      itemType={props.itemType}
+      className={`${props.className} flex flex-row`}
+    >
       {props.children}
     </div>
   );
@@ -42,7 +66,13 @@ const FlexRow = (props: React.HTMLProps<HTMLDivElement>) => {
 
 const FlexResponsiveRow = (props: React.HTMLProps<HTMLDivElement>) => {
   return (
-    <FlexRow id={props.id} className={`${props.className} sm:flex-col`}>
+    <FlexRow
+      id={props.id}
+      itemProp={props.itemProp}
+      itemScope={props.itemScope}
+      itemType={props.itemType}
+      className={`${props.className} sm:flex-col`}
+    >
       {props.children}
     </FlexRow>
   );

@@ -2,6 +2,9 @@ import * as React from 'react';
 
 const H1 = (props: React.HTMLProps<HTMLHeadingElement>) => (
   <h1
+    itemProp={props.itemProp}
+    itemScope={props.itemScope}
+    itemType={props.itemType}
     className={`${props.className} py-4 text-2xl text-center text-brand tracking-wide font-normal leading-10`}
   >
     {props.children}
@@ -10,6 +13,9 @@ const H1 = (props: React.HTMLProps<HTMLHeadingElement>) => (
 
 const H2 = (props: React.HTMLProps<HTMLHeadingElement>) => (
   <h2
+    itemProp={props.itemProp}
+    itemScope={props.itemScope}
+    itemType={props.itemType}
     className={`${props.className} py-3 text-xl text-left text-brand font-normal leading-2`}
   >
     {props.children}
@@ -18,6 +24,9 @@ const H2 = (props: React.HTMLProps<HTMLHeadingElement>) => (
 
 const H3 = (props: React.HTMLProps<HTMLHeadingElement>) => (
   <h3
+    itemProp={props.itemProp}
+    itemScope={props.itemScope}
+    itemType={props.itemType}
     className={`${props.className} text-lg py-2 text-left text-brand font-normal`}
   >
     {props.children}
@@ -26,6 +35,9 @@ const H3 = (props: React.HTMLProps<HTMLHeadingElement>) => (
 
 const H4 = (props: React.HTMLProps<HTMLHeadingElement>) => (
   <h4
+    itemProp={props.itemProp}
+    itemScope={props.itemScope}
+    itemType={props.itemType}
     className={`${props.className} text-base text-left text-brand font-normal`}
   >
     {props.children}
@@ -33,7 +45,12 @@ const H4 = (props: React.HTMLProps<HTMLHeadingElement>) => (
 );
 
 const Jumbo = (props: React.HTMLProps<HTMLHeadingElement>) => (
-  <h1 className={`${props.className} text-3xl text-left font-normal`}>
+  <h1
+    itemProp={props.itemProp}
+    itemScope={props.itemScope}
+    itemType={props.itemType}
+    className={`${props.className} text-3xl text-left font-normal`}
+  >
     {props.children}
   </h1>
 );

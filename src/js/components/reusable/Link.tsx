@@ -19,6 +19,8 @@ const Button = (props: React.HTMLProps<HTMLAnchorElement>) => (
     itemScope={props.itemScope}
     itemType={props.itemType}
     itemProp={props.itemProp}
+    target={props.target}
+    onClick={props.onClick}
   >
     {props.children}
   </a>
@@ -31,6 +33,8 @@ const Paragraph = (props: React.HTMLProps<HTMLAnchorElement>) => (
     itemScope={props.itemScope}
     itemType={props.itemType}
     itemProp={props.itemProp}
+    target={props.target}
+    onClick={props.onClick}
   >
     {props.children}
   </a>
@@ -43,6 +47,8 @@ const IconLink = (props: React.HTMLProps<HTMLAnchorElement>) => (
     itemScope={props.itemScope}
     itemType={props.itemType}
     itemProp={props.itemProp}
+    target={props.target}
+    onClick={props.onClick}
   >
     {props.children}
   </a>

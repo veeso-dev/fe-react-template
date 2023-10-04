@@ -12,7 +12,7 @@ import {
   hasCookiePreferences,
   isAnalyticsCookiesConsentGiven,
 } from './js/utils/cookies';
-import { initGaConsent } from './js/utils/ga';
+import { initGaConsent } from './js/utils/analytics';
 
 const Home = React.lazy(() => import('./js/pages/Home'));
 const NotFound = React.lazy(() => import('./js/pages/NotFound'));

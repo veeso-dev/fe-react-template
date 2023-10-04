@@ -3,10 +3,12 @@ import * as React from 'react';
 const Default = (props: React.HTMLProps<HTMLAnchorElement>) => (
   <a
     href={props.href}
-    className={`${props.className} font-medium text-brand 200 cursor-pointer hover:underline`}
+    className={`${props.className} font-medium text-brand cursor-pointer hover:underline`}
     itemScope={props.itemScope}
     itemType={props.itemType}
     itemProp={props.itemProp}
+    target={props.target}
+    onClick={props.onClick}
   >
     {props.children}
   </a>

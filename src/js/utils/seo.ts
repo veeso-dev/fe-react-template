@@ -5,6 +5,7 @@ interface SeoPages {
 interface SeoData {
   title: string;
   description: string;
+  ogSiteName?: string;
 }
 
 const PAGE_TITLES: SeoPages = {
@@ -31,3 +32,13 @@ export const pageDescription = (pathname: string): string => {
   const data = seoData(pathname);
   return data ? data.description : 'Page could not be found on the website';
 };
+
+export const pageOgSiteName = (pathname: string): string => {
+  const data = seoData(pathname);
+  return data?.ogSiteName ? data.ogSiteName : pageTitle(pathname);
+};
+
+export const isPageNotFound = (pathname: string): boolean =>
+  seoData(pathname) === undefined;
+
+export const noIndex = (): boolean => false;

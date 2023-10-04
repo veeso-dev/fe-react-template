@@ -1,6 +1,6 @@
 import { isAnalyticsCookiesConsentGiven } from './cookies';
 
-const pushGA4Event = (eventName: string, parameters: any) => {
+const pushAnalyticsEvent = (eventName: string, parameters: any) => {
   const canUseGa4 =
     window.gtag !== undefined && isAnalyticsCookiesConsentGiven();
 

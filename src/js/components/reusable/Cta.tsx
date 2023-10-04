@@ -6,6 +6,7 @@ interface Props {
   disabled?: boolean;
   children: JSX.Element | JSX.Element[] | string;
   transparent?: boolean;
+  className?: string;
 }
 
 const Cta = (props: Props) => {
@@ -15,7 +16,7 @@ const Cta = (props: Props) => {
 
   return (
     <Button.Primary
-      className="text-xl h-fit px-24 py-4 w-full"
+      className={`${props.className} text-xl h-fit px-24 py-4 w-full`}
       style={style}
       disabled={props.disabled}
       onClick={props.onClick}
@@ -28,7 +29,7 @@ const Cta = (props: Props) => {
 export const Alternative = (props: Props) => {
   return (
     <Button.Alternative
-      className="text-lg h-fit px-24 py-4 w-full"
+      className={`${props.className} text-lg h-fit px-24 py-4 w-full`}
       disabled={props.disabled}
       onClick={props.onClick}
     >

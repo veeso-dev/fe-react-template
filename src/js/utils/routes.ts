@@ -1,5 +1,3 @@
-import { getNavigatorLanguage } from './translations';
-
 export enum Route {
   CONTACTS = 'contacts',
   COOKIE_POLICY = 'cookie-policy',
@@ -10,14 +8,24 @@ export enum Route {
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Route {
   export function url(route: Route): string {
-    const lang = getNavigatorLanguage();
-
     if (route === Route.HOME) {
-      return `/${lang}`;
+      return `/`;
     }
 
-    return `/${lang}/${route}`;
+    return `/${route}`;
   }
+
+  export function isRoute(keyOrValue: any): boolean {
+    return isEnumKey(keyOrValue) || isEnumValue(keyOrValue);
+  }
+}
+
+function isEnumKey(key: any): boolean {
+  return Object.keys(Route).includes(key);
+}
+
+function isEnumValue(value: any): boolean {
+  return Object.values(Route).includes(value);
 }
 
 export interface MenuEntries {
@@ -31,6 +39,10 @@ interface MenuEntry {
 }
 
 export const getIdFromHash = (): string | undefined => {
+  if (typeof window === 'undefined') {
+    return undefined;
+  }
+
   const hash = window.location.hash;
   const lastIndex = hash.lastIndexOf('#');
 

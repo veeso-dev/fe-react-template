@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as Icon from 'react-feather';
+import * as Icon from 'react-icons/fi';
 
 import { DropdownEntry } from '../MenuEntries';
 import Link from './Link';
@@ -64,12 +64,12 @@ const DropdownButton = ({
       <Container.FlexRow className="relative items-center justify-between">
         <Link.NavLink onClick={onClick}>{name}</Link.NavLink>
         {isOpen ? (
-          <Icon.ChevronUp
+          <Icon.FiChevronUp
             className="text-brandLight sm:text-brand hover:text-bgContentHover sm:hover:text-brandHover hover:cursor-pointer"
             onClick={onClick}
           />
         ) : (
-          <Icon.ChevronDown
+          <Icon.FiChevronDown
             className="text-brandLight sm:text-brand hover:text-bgContentHover sm:hover:text-brandHover hover:cursor-pointer"
             onClick={onClick}
           />

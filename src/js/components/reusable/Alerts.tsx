@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as Icon from 'react-feather';
+import * as Icon from 'react-icons/fi';
 
 import Container from './Container';
 
@@ -10,7 +10,7 @@ const Danger = (props: React.HTMLProps<HTMLDivElement>) => (
   >
     <Container.FlexResponsiveRow className="items-center gap-8">
       <Container.Container>
-        <Icon.AlertOctagon size={32} />
+        <Icon.FiAlertOctagon size={32} />
       </Container.Container>
       <Container.Container>{props.children}</Container.Container>
     </Container.FlexResponsiveRow>
@@ -24,7 +24,7 @@ const Info = (props: React.HTMLProps<HTMLDivElement>) => (
   >
     <Container.FlexResponsiveRow className="items-center gap-8">
       <Container.Container>
-        <Icon.Info size={32} />
+        <Icon.FiInfo size={32} />
       </Container.Container>
       <Container.Container>{props.children}</Container.Container>
     </Container.FlexResponsiveRow>
@@ -38,7 +38,7 @@ const Warning = (props: React.HTMLProps<HTMLDivElement>) => (
   >
     <Container.FlexResponsiveRow className="items-center gap-8">
       <Container.Container>
-        <Icon.AlertTriangle size={32} />
+        <Icon.FiAlertTriangle size={32} />
       </Container.Container>
       <Container.Container>{props.children}</Container.Container>
     </Container.FlexResponsiveRow>

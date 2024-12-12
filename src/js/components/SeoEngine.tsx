@@ -9,12 +9,12 @@ import {
   pageOgSiteName,
   pageTitle,
 } from '../utils/seo';
-import { getNavigatorLanguage } from '../utils/translations';
 import CONTACTS from '../data/contacts';
+
+const LANG = 'en';
 
 const SeoEngine = () => {
   const { pathname } = useLocation();
-  const lang = getNavigatorLanguage();
   // states
   const [title, setTitle] = React.useState(pageTitle(pathname));
   const [description, setDescription] = React.useState(
@@ -25,8 +25,6 @@ const SeoEngine = () => {
   const canonicalUrl = `${CONTACTS.siteUrl}${pathname}`;
 
   React.useEffect(() => {
-    document.documentElement.lang = getNavigatorLanguage();
-
     setTitle(pageTitle(pathname));
     setDescription(pageDescription(pathname));
     setOgSiteName(pageOgSiteName(pathname));
@@ -34,7 +32,7 @@ const SeoEngine = () => {
 
   return (
     <Helmet>
-      <html lang={lang} />
+      <html lang={LANG} />
       <title>{title}</title>
       <link rel="canonical" href={canonicalUrl} />
       <meta name="description" content={description} />
@@ -43,7 +41,7 @@ const SeoEngine = () => {
       <meta property="og:type" content={'website'} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:site_name" content={ogSiteName} />
-      <meta property="og:locale" content={lang} />
+      <meta property="og:locale" content={LANG} />
       {(isPageNotFound(pathname) || noIndex()) && (
         <meta name="googlebot" content="noindex, nofollow" />
       )}

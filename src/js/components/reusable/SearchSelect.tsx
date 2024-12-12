@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as Icon from 'react-feather';
+import * as Icon from 'react-icons/fi';
 
 import Container from './Container';
 
@@ -55,7 +55,7 @@ const SearchSelect = (props: Props) => {
   return (
     <div className={`${props.className} relative`}>
       <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-        {props.icon || <Icon.Search size={20} className="text-brand" />}
+        {props.icon || <Icon.FiSearch size={20} className="text-brand" />}
       </div>
       <input
         disabled={props.disabled}

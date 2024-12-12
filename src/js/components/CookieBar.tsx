@@ -43,7 +43,7 @@ const CookieBar = () => {
         <Container.FlexCols className="justify-between sm:h-full">
           <Container.Container className="sm:w-full sm:overflow-y-auto">
             <Heading.H2 className="sm:py-0">Cookie Policy</Heading.H2>
-            <Paragraph.Leading className="sm:text-sm">
+            <Paragraph.Default className="sm:text-sm">
               Questo sito utilizza cookie per migliorare l&apos;esperienza di
               navigazione degli utenti e per raccogliere informazioni
               sull&apos;utilizzo del sito stesso. Utilizziamo sia cookie tecnici
@@ -53,7 +53,7 @@ const CookieBar = () => {
               <Link.Paragraph href={Route.COOKIE_POLICY}>
                 Cookie Policy.
               </Link.Paragraph>
-            </Paragraph.Leading>
+            </Paragraph.Default>
           </Container.Container>
           <Container.FlexRow className="justify-start gap-4 sm:my-2">
             <Button.Primary

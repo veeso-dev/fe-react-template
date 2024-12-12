@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as Icon from 'react-feather';
+import * as Icon from 'react-icons/fi';
 import Container from './Container';
 
 interface Props {
@@ -34,12 +34,12 @@ const Accordion = ({
       >
         {title}
         {isOpen ? (
-          <Icon.ChevronUp
+          <Icon.FiChevronUp
             className="text-brand hover:text-brandAlt"
             size={32}
           />
         ) : (
-          <Icon.ChevronDown
+          <Icon.FiChevronDown
             className="text-brand hover:text-brandAlt"
             size={32}
           />

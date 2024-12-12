@@ -4,7 +4,7 @@ import Container from './Container';
 const BlankPage = (props: React.HTMLProps<HTMLDivElement>) => {
   return (
     <div
-      className={`${props.className} w-screen min-h-screen pb-12 bg-zinc-50`}
+      className={`${props.className} w-screen min-h-screen mt-[80px] sm:mt-[120px] pb-12 bg-zinc-50`}
     >
       {props.children}
     </div>
@@ -13,7 +13,9 @@ const BlankPage = (props: React.HTMLProps<HTMLDivElement>) => {
 
 const BrandPage = (props: React.HTMLProps<HTMLDivElement>) => {
   return (
-    <BlankPage className={`${props.className} relative bg-brand py-32`}>
+    <BlankPage
+      className={`${props.className} relative mt-[80px] sm:mt-[120px] bg-brand py-32`}
+    >
       <Container.Container className="z-1 relative">
         {props.children}
       </Container.Container>

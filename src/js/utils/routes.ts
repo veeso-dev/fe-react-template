@@ -1,3 +1,5 @@
+// eslint-disable-rules @typescript-eslint/no-explicit-any
+
 export enum Route {
   CONTACTS = 'contacts',
   COOKIE_POLICY = 'cookie-policy',

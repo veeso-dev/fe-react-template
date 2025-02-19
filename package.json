@@ -4,6 +4,7 @@
   "repository": "git@github.com:veeso/fe-react-template.git",
   "author": "Christian Visintin <christian.visintin@veeso.dev>",
   "license": "MIT",
+  "type": "module",
   "browserslist": {
     "production": [
       "> 5%",
@@ -17,17 +18,17 @@
     ]
   },
   "scripts": {
-    "build:release": "yarn clean && parcel build src/index.html --reporter @parcel/reporter-bundle-analyzer && cp sitemap.xml dist/sitemap.xml && cp robots.txt dist/robots.txt",
-    "clean": "rm -rf dist/* .parcel-cache/",
-    "dev": "parcel src/index.html",
-    "lint": "eslint . --ext .ts --ext .tsx --max-warnings=0",
+    "dev": "vite --port 3000",
+    "build": "tsc -b && vite build",
+    "clean": "rm -rf dist/*",
+    "lint": "eslint .",
     "prettier": "prettier --config .prettierrc --write src/",
-    "prettier:check": "prettier --config .prettierrc --check src/"
+    "prettier:check": "prettier --config .prettierrc --check src/",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "animate.css": "^4.1",
     "js-cookie": "^3.0",
-    "leaflet": "^1.9.4",
+    "leaflet": "^1",
     "react": "^19",
     "react-dom": "^19",
     "react-helmet": "^6.1",
@@ -36,25 +37,28 @@
     "react-router-dom": "^6.22"
   },
   "devDependencies": {
-    "@parcel/reporter-bundle-analyzer": "^2.11.0",
-    "@parcel/transformer-typescript-tsc": "^2.13.0",
-    "@types/leaflet": "^1.9.15",
+    "@eslint/js": "^9",
     "@types/gtag.js": "^0.0.20",
-    "@types/js-cookie": "^3.0.6",
-    "@types/react": "^18.2",
-    "@types/react-dom": "^18.2",
-    "@types/react-helmet": "^6.1.11",
-    "@types/react-lazyload": "^3.2.3",
-    "@types/react-router-dom": "^5.3.3",
+    "@types/js-cookie": "^3",
+    "@types/leaflet": "^1",
+    "@types/node": "^22.13.4",
+    "@types/react": "19",
+    "@types/react-dom": "19",
+    "@types/react-helmet": "^6",
+    "@types/react-lazyload": "^3",
+    "@types/react-router-dom": "^5",
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
-    "eslint": "^8",
-    "eslint-config-prettier": "^9.1",
-    "parcel": "^2.13",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
     "postcss": "^8.4",
     "prettier": "^3",
     "process": "^0.11.10",
-    "tailwindcss": "^3.4",
-    "typescript": "^5.3"
+    "tailwindcss": "^3",
+    "typescript": "~5.7.3",
+    "typescript-eslint": "^8",
+    "vite": "^6"
   }
 }

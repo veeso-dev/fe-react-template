@@ -8,8 +8,8 @@ import {
 } from 'react-leaflet';
 
 import { Icon } from 'leaflet';
-import 'leaflet/dist/leaflet.css';
 
+import 'leaflet/dist/leaflet.css';
 import MarkerIcon from 'leaflet/dist/images/marker-icon.png';
 import MarkerShadow from 'leaflet/dist/images/marker-shadow.png';
 import MarkerRetina from 'leaflet/dist/images/marker-icon-2x.png';

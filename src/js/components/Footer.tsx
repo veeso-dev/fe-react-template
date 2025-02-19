@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import CONTACTS from '../data/contacts';
 import Container from './reusable/Container';
 import Heading from './reusable/Heading';

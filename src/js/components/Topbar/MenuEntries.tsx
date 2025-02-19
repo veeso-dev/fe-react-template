@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import { Route } from '../../utils/routes';
 import Link from './Menu/Link';
 import Dropdown from './Menu/Dropdown';

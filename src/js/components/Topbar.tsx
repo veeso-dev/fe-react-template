@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import Desktop from './Topbar/Desktop';
 import Mobile from './Topbar/Mobile';
 import { Route } from '../utils/routes';

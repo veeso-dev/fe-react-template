@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useLocation } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import { Helmet as HelmetImport, HelmetProps } from 'react-helmet';
+
+export const Helmet = HelmetImport as React.ComponentClass<HelmetProps>;
 
 import {
   isPageNotFound,
